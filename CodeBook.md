@@ -1,11 +1,11 @@
 ##Tidy data for 'Human Activity Recognition Using Smartphones Data Set'
 
 | Variable Name | Description   |
-| ------------- |:-------------:|
+| ------------- |:--------------|
 |Subject        | The subject who performed the activity for each window sample. Its range is from 1 to 30. Coming from train\subject_train.txt and test\subject_test.txt |
 |Activity       | Activity name. Coming from train\y_train.txt and test\y_test.txt, and transform by the data in activity_labels.txt.|
-|tBodyAcc-mean-X| base the avarage value of body acceleration signal in X-axial, than get the avarage value by Subject and Activity. |
-|tBodyAcc-mean-Y| Y-axial, other like up.|
+|>tBodyAcc-mean-X| base the avarage value of body acceleration signal in X-axial, than get the avarage value by Subject and Activity. |
+|>tBodyAcc-mean-Y| Y-axial, other like up.|
 |tBodyAcc-mean-Z| Z-axial, other like up.|
 |tBodyAcc-std-X | base the standard deviation value of body acceleration signal in X-axial, than get the avarage value by Subject and Activity. |
 |tBodyAcc-std-Y | Y-axial, other like up.|
