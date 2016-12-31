@@ -32,3 +32,16 @@
 \# combine subject and activiy name with the measurement by column
 >  actMeanStd <- cbind(subject, actName, meanstd) 
 
+## 4 Appropriately labels the data set with descriptive variable names
+\# use regular expression to identify the mean or standard deviation measurements  
+\# save the name of these measurements to the variable actFields  
+\# create subject and activity name vector to the variable groupFields
+\# use groupFields and actFields to set descriptive variable names for groupFields
+>  actFields <- gsub("\\(\\)","",features$desc[grep("(mean|std)\\(", features$desc)])  
+>  groupFields <- c("Subject", "Activity")  
+>  names(actMeanStd) <- c( groupFields, actFields )  
+
+## 5 From the data set in step 4, creates a second, 
+## independent tidy data set with the average of each variable for each activity and each subject.
+>  final <- aggregate(actMeanStd[actFields], by = actMeanStd[groupFields], FUN=mean)
+>  write_csv(final, "final.csv")  
